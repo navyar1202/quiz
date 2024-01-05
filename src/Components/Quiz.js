@@ -102,10 +102,7 @@ const Quiz = () => {
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
     const [time, setTime] = useState(5);
-    const [showQuestion, setShowQuestion] = useState(false);
-    // const startQuiz = () => {
-    //     setShowQuestion(true);
-    // };
+
 
 
 
@@ -147,27 +144,21 @@ const Quiz = () => {
 
     return (
 
-        <div className='app'>     
-                {/* {!showQuestion && !showScore && (
-            )} */}
-
-
-
-
+        <div className='app'>
 
             {showScore ? (
                 <div>
-                <div className='score-section' style={{ color: score < 5 ? 'red' : 'green' }}>
-                    You scored {(score / questions.length) * 100} % out of 100 %
+                    <div className='score-section' style={{ color: score < 5 ? 'red' : 'green' }}>
+                        You scored {(score / questions.length) * 100} % out of 100 %
 
-                 
+
+                    </div>
+                    <div className='score-section' >
+                        Developed By Navya R
+
+                    </div>
                 </div>
-                   <div className='score-section' >
-                   Developed By Navya R
-               
-                </div>
-                </div>
-               
+
             ) : (
                 <>
                     <div className='question-section'>
@@ -183,13 +174,13 @@ const Quiz = () => {
                         ))}
 
                     </div>
-                    
-            <div className="timer-text">
-                <p> Quiz Time:{time} </p>
-            </div>
+
+                    <div className="timer-text">
+                        <p> Quiz Time:{time} </p>
+                    </div>
                 </>
             )}
-           
+
 
 
 
